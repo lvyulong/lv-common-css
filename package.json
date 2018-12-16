@@ -1,0 +1,42 @@
+{
+  "name": "common-css",
+  "version": "1.0.0",
+  "description": "Some common classes extracted from my daily projects.",
+  "main": "dist/index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^0.28.11",
+    "autoprefixer": "^8.6.0",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
+    "mini-css-extract-plugin": "^0.4.0",
+    "optimize-css-assets-webpack-plugin": "^4.0.2",
+    "postcss-loader": "^2.1.5",
+    "style-loader": "^0.21.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lvyulong/common-css.git"
+  },
+  "keywords": [
+    "css"
+  ],
+  "author": "lvyulong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lvyulong/common-css/issues"
+  },
+  "homepage": "https://github.com/lvyulong/common-css#readme"
+}
