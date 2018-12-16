@@ -5,18 +5,28 @@ const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plug
 
 module.exports = {
     mode:'production',
-    entry:path.resolve(__dirname,'./src/index.js'),
+    entry:{
+        main:path.resolve(__dirname,'./src/main.js'),
+        color:path.resolve(__dirname,'./src/color.js'),
+        font:path.resolve(__dirname,'./src/font.js'),
+        position:path.resolve(__dirname,'./src/position.js'),
+    },
     output: {
-        filename: "index.js",
-        path: path.resolve(__dirname,'dist'),
-        libraryTarget: "umd"
+        filename: "[name].js",
+        path: path.resolve(__dirname,'dist/script'),
+    },
+    resolve: {
+        extensions: ['js'],
+        alias:{
+            app:path.resolve(__dirname,'./src/style/')
+        }
     },
     plugins: [
         // 提取css文件为单独的文件
         new MiniCssExtractPlugin({
-            filename: `style/[name].min.css`,
-            chunkFilename: `style/[id].css`
+            filename: `../style/[name].css`,
         }),
+
         // 压缩css文件
         new OptimizeCssAssetsWebpackPlugin(),
         // 每次打包清空
@@ -36,7 +46,12 @@ module.exports = {
                 test: /\.css$/,
                 use: [
                     // css文件提取为单独的文件
-                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            publicPath: '../test/'
+                        }
+                    },
                     'css-loader',
                     'postcss-loader']
             },
@@ -44,7 +59,12 @@ module.exports = {
             {
                 test: /\.less$/,
                 use: [
-                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            publicPath: '../test/'
+                        }
+                    },
                     'css-loader',
                     'postcss-loader',
                     'less-loader'

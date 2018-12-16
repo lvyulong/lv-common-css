@@ -2,7 +2,7 @@
   "name": "lv-common-css",
   "version": "1.0.0",
   "description": "Some common classes extracted from my daily projects.",
-  "main": "dist/index.js",
+  "main": "dist/style/main.css",
   "dependencies": {},
   "devDependencies": {
     "webpack": "^4.27.1",
