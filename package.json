@@ -1,5 +1,5 @@
 {
-  "name": "common-css",
+  "name": "lv-common-css",
   "version": "1.0.0",
   "description": "Some common classes extracted from my daily projects.",
   "main": "dist/index.js",
