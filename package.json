@@ -3,9 +3,7 @@
   "version": "1.0.1",
   "description": "Some common classes extracted from my daily projects.",
   "main": "dist/style/main.css",
-  "dependencies": {
-    "underscore": "^1.9.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "webpack": "^4.27.1",
     "webpack-cli": "^3.1.2",

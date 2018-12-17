@@ -9,7 +9,7 @@ module.exports = {
         main:path.resolve(__dirname,'./src/main.js'),
         color:path.resolve(__dirname,'./src/color.js'),
         font:path.resolve(__dirname,'./src/font.js'),
-        position:path.resolve(__dirname,'./src/position.js'),
+        box:path.resolve(__dirname,'./src/box.js'),
     },
     output: {
         filename: "[name].js",

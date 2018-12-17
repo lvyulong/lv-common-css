@@ -1,0 +1,1 @@
+import 'app/box.less';
