@@ -2,7 +2,7 @@
 @import "box";
 @import "font";
 
-//初始化样式
+//-----------------------------------初始化样式-----------------------
 * {
   margin: 0;
   padding: 0;
@@ -40,3 +40,39 @@ table {
   border-spacing: 0;
 }
 
+//-----------------------------------鼠标显示------------------------
+.pointer{
+  cursor: pointer;
+}
+
+//------------------------------------浮动---------------------------
+.pull-left{
+  float: left;
+}
+.pull-right{
+  float: right;
+}
+.clean-float:after{
+  clear:both;
+  content:'.';
+  display:block;
+  width: 0;
+  height: 0;
+  visibility:hidden;
+}
+
+//------------------------------------隐藏滚动条-----------------------
+//chrome 和Safari
+.hide-scrollbar::-webkit-scrollbar {
+  width: 0 !important
+}
+//IE 10+
+.hide-scrollbar { -ms-overflow-style: none; }
+//Firefox
+.hide-scrollbar { overflow: -moz-scrollbars-none; }
+
+//--------------------------------回弹效果的滚动-----------------------
+//在ios上有用
+.scroll-touch{
+  -webkit-overflow-scrolling: touch;
+}

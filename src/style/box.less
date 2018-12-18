@@ -221,3 +221,32 @@
 .bd-b{
   border-bottom: 1px solid @border-gray;
 }
+
+
+//-------------------------------弹性盒子模型-------------------------
+//仅垂直居中：弹性盒子模型实现
+.v-center{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+//仅水平居中：弹性盒子模型实现
+.h-center{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+//垂直并水平居中
+.v-h-center{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+//文字或者内联元素居中
+.text-center{
+  text-align: center;
+}
