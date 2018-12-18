@@ -1,6 +1,6 @@
 {
   "name": "lv-common-css",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Some common classes extracted from my daily projects.",
   "main": "dist/style/main.css",
   "dependencies": {},
