@@ -6,6 +6,7 @@ const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plug
 module.exports = {
     mode:'production',
     entry:{
+        main:path.resolve(__dirname,'./src/script/main.js'),
         pc:path.resolve(__dirname,'./src/script/pc.js'),
         mobile:path.resolve(__dirname,'./src/script/mobile.js'),
         // common部分
