@@ -6,10 +6,13 @@ const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plug
 module.exports = {
     mode:'production',
     entry:{
-        main:path.resolve(__dirname,'./src/main.js'),
-        color:path.resolve(__dirname,'./src/color.js'),
-        font:path.resolve(__dirname,'./src/font.js'),
-        box:path.resolve(__dirname,'./src/box.js'),
+        pc:path.resolve(__dirname,'./src/script/pc.js'),
+        mobile:path.resolve(__dirname,'./src/script/mobile.js'),
+        // common部分
+        'common/color':path.resolve(__dirname,'./src/script/common/color.js'),
+        'common/font':path.resolve(__dirname,'./src/script/common/font.js'),
+        'common/box':path.resolve(__dirname,'./src/script/common/box.js'),
+        'common/init':path.resolve(__dirname,'./src/script/common/init.js'),
     },
     output: {
         filename: "[name].js",
@@ -18,7 +21,7 @@ module.exports = {
     resolve: {
         extensions: ['js'],
         alias:{
-            app:path.resolve(__dirname,'./src/style/')
+            style:path.resolve(__dirname,'./src/style/')
         }
     },
     plugins: [
@@ -49,7 +52,7 @@ module.exports = {
                     {
                         loader: MiniCssExtractPlugin.loader,
                         options: {
-                            publicPath: '../test/'
+                            publicPath: '../'
                         }
                     },
                     'css-loader',
@@ -62,7 +65,7 @@ module.exports = {
                     {
                         loader: MiniCssExtractPlugin.loader,
                         options: {
-                            publicPath: '../test/'
+                            publicPath: '../'
                         }
                     },
                     'css-loader',

@@ -1,0 +1,30 @@
+//导入modules/com下面的其他所有文件
+//@import "";
+
+
+//----------------------------------清除浮动
+.pull-left{
+  float: left;
+}
+.pull-right{
+  float: right;
+}
+//清除浮动
+.clean-float:after{
+  clear:both;
+  content:'.';
+  display:block;
+  width: 0;
+  height: 0;
+  visibility:hidden;
+}
+
+//----------------------------------隐藏滚动条
+//chrome 和Safari
+.hide-scrollbar::-webkit-scrollbar {
+  width: 0 !important
+}
+//IE 10+
+.hide-scrollbar { -ms-overflow-style: none; }
+//Firefox
+.hide-scrollbar { overflow: -moz-scrollbars-none; }
