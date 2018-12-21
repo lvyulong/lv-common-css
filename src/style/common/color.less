@@ -19,24 +19,47 @@
 .pink{
   color: @pink;
 }
+.gray{
+  color: @gray;
+}
+.white{
+  color: @white;
+}
 
 
 //background color
+
+// bg-color 背景色
+.bg(@color:@white) {
+  background-color: @color;
+}
+.bg-white {
+  .bg(@white)
+}
+.bg-gray {
+  .bg(@gray);
+}
 .bg-red{
-  background-color: @red;
+  .bg(@red);
 }
 .bg-green{
-  background-color: @green;
+  .bg(@green);
 }
 .bg-blue{
-  background-color: @blue;
+  .bg(@blue);
 }
 .bg-yellow{
-  background-color: @yellow;
+  .bg(@yellow);
 }
 .bg-orange{
-  background-color: @orange;
+  .bg(@orange);
 }
 .bg-pink{
-  background-color: @pink;
+  .bg(@pink);
+}
+.bg-gray{
+  .bg(@gray);
+}
+.bg-white{
+  .bg(@white);
 }
