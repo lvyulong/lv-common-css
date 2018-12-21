@@ -1,6 +1,22 @@
 //导入modules/mobile下面的其他所有文件
 @import "color";
 
+
+//a链接的样式
+a,a:hover,a:active,a:visited,a:link,a:focus{
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+  outline:none;
+  background: none;
+  text-decoration: none;
+  color: #0f0f0f;
+}
+
+// ios去掉输入框中的阴影
+input,textarea{
+  -webkit-appearance: none;
+}
+
 //--------------------------------回弹效果的滚动-----------------------
 //在ios上有用
 .scroll-touch{
