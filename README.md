@@ -10,7 +10,6 @@
 //指向的是dist/style/main.css
 import 'lv-common-css';
 ```
-是不是感觉有点坑？哈哈。但确实也是没办法，因为不管入口指向pc或者mobile都不太合适！见谅！！！
 
 #### 2、dist/style/pc.css
 pc端常用的css。
